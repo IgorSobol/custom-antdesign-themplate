@@ -1,0 +1,55 @@
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --format codeframe ."
+  },
+  "browserslist": [
+    "> 1%",
+    "last 4 versions",
+    "IE > 11"
+  ],
+  "name": "custom-antdesign-themplate",
+  "version": "1.0.0",
+  "description": "Library customization training project",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgorSobol/custom-antdesign-themplate.git"
+  },
+  "keywords": [
+    "/"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgorSobol/custom-antdesign-themplate/issues"
+  },
+  "homepage": "https://github.com/IgorSobol/custom-antdesign-themplate#readme",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-less": "^1.0.1",
+    "antd": "^3.23.5",
+    "babel-plugin-import": "^1.12.2",
+    "cryptiles": "^4.1.2",
+    "hoek": "^4.2.1",
+    "less": "^2.7.2",
+    "next": "^9.0.7",
+    "npm": "^6.13.1",
+    "null-loader": "^3.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "react-styleguidist": "^10.2.1"
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^3.2.0",
+    "eslint": "^6.5.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-import-resolver-babel-module": "^5.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3"
+  }
+}

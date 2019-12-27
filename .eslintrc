@@ -1,0 +1,29 @@
+{
+  "plugins": ["react"],
+  "extends": ["eslint:recommended", "airbnb", "plugin:react/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 9
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "globals": {
+    "__DEV__": true
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "rules": {
+    "react/jsx-props-no-spreading": [2, {
+      "html": "enforce",
+      "custom": "ignore"
+    }],
+    "jsx-a11y/anchor-is-valid": 0,
+    "react/jsx-filename-extension": 0
+  }
+}
