@@ -1,14 +1,6 @@
-# Next.js enterprise AntDesigne custom theme
+# AntDesigne custom theme
 In this manual you can familiarize yourself with the installation and configuration details.
-## Getting Started
-In order to see examples from the template, download it from the link
-```
-  git@github.com:rubygarage/nextjs-enterprise-ant-theme.git
-```
-then do
-```
-  yarn
-```
+
 ### To run a local demo
 ```
   npx styleguidist server 
@@ -24,7 +16,6 @@ You need to take several steps
   src/stylesheets/applications.less
 ```
 ### Project Structure Notes
-
 
   * ``` ~src/stylesheets/ant_theme/**/* ```
   This folder contains all the variables with which the basic customization of the anti-design components was carried out.
