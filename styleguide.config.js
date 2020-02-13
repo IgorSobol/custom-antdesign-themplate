@@ -1,26 +1,33 @@
-const path = require('path');
-
 const COMPONENTS_EXT = '{js,jsx}';
 
 module.exports = {
   pagePerSection: true,
   sections: [
     {
-      name: 'Ant Components',
+      name: 'Components',
       usageMode: 'collapse', // 'hide' | 'collapse' | 'expand',
       exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
       components: [
-        `src/**/*.${COMPONENTS_EXT}`
+        `src/components/**/*.${COMPONENTS_EXT}`,
       ],
-      ignore: []
-    }
+      ignore: [],
+    },
+    {
+      name: 'Layout',
+      usageMode: 'collapse', // 'hide' | 'collapse' | 'expand',
+      exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
+      components: [
+        `src/layout/**/*.${COMPONENTS_EXT}`,
+      ],
+      ignore: [],
+    },
   ],
   webpackConfig: {
     devServer: {
-      clientLogLevel: 'warn'
+      clientLogLevel: 'warn',
     },
     resolve: {
-      extensions: ['.js', '.json', '.jsx']
+      extensions: ['.js', '.json', '.jsx'],
     },
     module: {
       rules: [
@@ -28,23 +35,23 @@ module.exports = {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
           use: [
-            'babel-loader'
-          ]
+            'babel-loader',
+          ],
         },
         {
           test: /\.(css|less)$/,
-          use: ['style-loader', 'css-loader', 'less-loader']
+          use: ['style-loader', 'css-loader', 'less-loader'],
         },
         {
           test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
           use: {
             loader: 'url-loader',
             options: {
-              limit: 100000
-            }
-          }
-        }
-      ]
-    }
-  }
+              limit: 100000,
+            },
+          },
+        },
+      ],
+    },
+  },
 };

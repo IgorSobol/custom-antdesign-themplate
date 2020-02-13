@@ -1,0 +1,56 @@
+.ant-input-number {
+  position: relative;
+  width: 122px;
+  padding: 0 36px;
+  svg {
+    display: none;
+  }
+}
+.ant-input-number-lg input {
+  height: 48px;
+}
+.ant-input-number-handler-wrap {
+  position: initial;
+  height: 0;
+  width: 100%;
+  opacity: 1;
+}
+.ant-input-number-handler {
+  position: absolute;
+  top: 50%;
+  width: 24px;
+  background-color: #F0F3F7;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: none;
+  &,
+  &:hover,
+  &:focus {
+    height: 24px !important;
+  }
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: @black-secondary-text;
+  }
+}
+.ant-input-number-handler-up {
+  right: 12px;
+  &:before {
+    &:extend(.icon);
+    &:extend(.icon-plus);
+  }
+}
+.ant-input-number-handler-down {
+  left: 12px;
+  &:before {
+    &:extend(.icon);
+    &:extend(.icon-minus);
+  }
+}
+.ant-input-number-input {
+  padding: 0 4px;
+  text-align: center;
+}

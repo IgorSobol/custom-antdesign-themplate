@@ -1,0 +1,59 @@
+.ant-btn {
+  .anticon {
+    width: 18px;
+  }
+  &:after {
+    display: none !important;
+  }
+  &:hover,
+  &:focus {
+    color: @primary-color;
+    background-color: @blue-100;
+    border-color: transparent;
+  }
+  &:active {
+    background-color: @blue-200;
+    border-color: transparent;
+  }
+  &.ant-btn-loading {
+    background-color: @primary-disabled;
+    border-color: @primary-disabled;
+    color: @primary-color;
+    .anticon-loading {
+      color: @primary-color;
+    }
+    &:before {
+      display: none;
+    }
+  }
+}
+.ant-btn-primary {
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: @primary-hover;
+  }
+  &:active {
+    background-color: @primary-pressed;
+  }
+}
+.ant-btn-danger {
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: @accent-hover;
+  }
+  &:active {
+    background-color: @accent-pressed;
+  }
+  &.ant-btn-loading {
+    color: @pink-1000;
+    .anticon-loading {
+      color: @pink-1000;
+    }
+  }
+}
+.ant-btn-background-ghost.ant-btn-loading {
+  background-color: @primary-disabled !important;
+  border-color: @primary-disabled;
+}

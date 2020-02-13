@@ -1,0 +1,30 @@
+.ant-radio-wrapper {
+  color: @grey-800;
+  transition: none;
+  &:hover,
+  &:focus {
+    color: @blue-1000;
+    .ant-radio-inner {
+      transition: none;
+      border-color: @blue-1000;
+    }
+  }
+  .ant-radio-checked:not(.ant-radio-disabled) + span {
+    color: @blue-1000;
+  }
+}
+.ant-radio-inner {
+  border-width: 2px;
+  &:after {
+    width: 8px;
+    height: 8px;
+  }
+}
+.ant-radio-wrapper-disabled {
+  .ant-radio-inner {
+    border-color: @grey-200 !important;
+    &:after {
+      background-color: @grey-200;
+    }
+  }
+}
