@@ -32,8 +32,8 @@
   import { Switch } from 'antd';
 
   <div>
-    <Switch loading defaultChecked />
+    <Switch style={{ marginBottom: 16 }} loading defaultChecked />
     <br />
-    <Switch size="small" loading />
+    <Switch loading />
   </div>
 ```
