@@ -1,0 +1,37 @@
+.ant-tag {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 3px 8px;
+  &:not(.ant-tag-has-color) {
+    border-color: @blue-1000;
+    &,
+    a {
+      color: @blue-1000;
+    }
+    i svg {
+      fill: @blue-1000;
+    }
+  }
+  &:hover:not(.ant-tag-has-color),
+  &:focus:not(.ant-tag-has-color) {
+    background-color: @blue-100;
+    border-color: @blue-100;
+  }
+  &:active:not(.ant-tag-has-color),
+  &:active:not(.ant-tag-has-color) {
+    background-color: @blue-200;
+    border-color: @blue-200;
+  }
+  .anticon-close {
+    margin-left: 4px;
+  }
+  .anticon-plus {
+    margin-right: 4px;
+  }
+}
+.ant-tag__input.ant-input {
+  height: 24px;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 3px 8px;
+}

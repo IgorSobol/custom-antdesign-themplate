@@ -1,0 +1,50 @@
+.ant-pagination-item {
+  border-color: transparent;
+  a {
+    color:#96A9C8;
+  }
+  &:hover,
+  &:focus {
+    border-color: @blue-1000;
+    a {
+      color: @primary-color;
+    }
+  }
+}
+.ant-pagination-item-active {
+  &,
+  &:hover,
+  &:focus {
+    border-color: @blue-100;
+    a {
+      color: @primary-color;
+    }
+  }
+}
+.ant-pagination-prev,
+.ant-pagination-next {
+  .ant-pagination-item-link {
+    border-color: @grey-300;
+    svg {
+      fill: @grey-300;
+    }
+    &:hover,
+    &:focus {
+      border-color: @blue-1000;
+      svg {
+        fill: @primary-color;
+      }
+    }
+  }
+  &.ant-pagination-disabled .ant-pagination-item-link {
+    border-color: @grey-100 !important;
+    &,
+    &:hover,
+    &:focus {
+      border-color: @grey-100 !important;
+      svg {
+        fill: @grey-100 !important;
+      }
+    }
+  }
+}
