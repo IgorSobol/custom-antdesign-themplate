@@ -37,10 +37,9 @@
 <p>There are 12 <mark>placement</mark> options available. Use <mark>arrowPointAtCenter</mark> if you want the arrow to point at the center of target.</p>
 
 ```js
-  import { Popconfirm, message, Button, Icon } from 'antd';
+  import { Popconfirm, message, Button } from 'antd';
 
   const text = 'Are you sure with this action?';
-  const icon = <Icon type="exclamation-circle" style={{ color: '#ffbb38' }} />;
 
   function confirm() {
     message.warning('Clicked on Yes.');
@@ -54,88 +53,88 @@
         onConfirm={confirm}
         okText="Yes"
         cancelText="No"
-        icon={icon}
+        cancelButtonProps={{type: "link"}}
       >
         <Button style={{ marginRight: 16, width: 100, marginBottom: 16 }}>TL</Button>
       </Popconfirm>
-      <Popconfirm placement="top" title={text} onConfirm={confirm} okText="Yes" cancelText="No" icon={icon}>
+      <Popconfirm cancelButtonProps={{type: "link"}} placement="top" title={text} onConfirm={confirm} okText="Yes" cancelText="No">
         <Button style={{ marginRight: 16, width: 100, marginBottom: 16 }}>Top</Button>
       </Popconfirm>
       <Popconfirm
+        cancelButtonProps={{type: "link"}}
         placement="topRight"
         title={text}
         onConfirm={confirm}
         okText="Yes"
         cancelText="No"
-        icon={icon}
       >
         <Button style={{ width: 100, marginBottom: 16 }}>TR</Button>
       </Popconfirm>
     </div>
     <div style={{ width: 70, float: 'left' }}>
-      <Popconfirm placement="leftTop" title={text} onConfirm={confirm} okText="Yes" cancelText="No" icon={icon}>
+      <Popconfirm cancelButtonProps={{type: "link"}} placement="leftTop" title={text} onConfirm={confirm} okText="Yes" cancelText="No">
         <Button style={{ marginRight: 16, width: 100, marginBottom: 16 }}>LT</Button>
       </Popconfirm>
-      <Popconfirm placement="left" title={text} onConfirm={confirm} okText="Yes" cancelText="No" icon={icon}>
+      <Popconfirm cancelButtonProps={{type: "link"}} placement="left" title={text} onConfirm={confirm} okText="Yes" cancelText="No">
         <Button style={{ marginRight: 16, width: 100, marginBottom: 16 }}>Left</Button>
       </Popconfirm>
       <Popconfirm
+        cancelButtonProps={{type: "link"}}
         placement="leftBottom"
         title={text}
         onConfirm={confirm}
         okText="Yes"
         cancelText="No"
-        icon={icon}
       >
         <Button style={{ marginRight: 16, width: 100, marginBottom: 16 }}>LB</Button>
       </Popconfirm>
     </div>
     <div style={{ width: 70, marginLeft: 232 }}>
       <Popconfirm
+        cancelButtonProps={{type: "link"}}
         placement="rightTop"
         title={text}
         onConfirm={confirm}
         okText="Yes"
         cancelText="No"
-        icon={icon}
       >
         <Button style={{  width: 100, marginBottom: 16 }}>RT</Button>
       </Popconfirm>
-      <Popconfirm placement="right" title={text} onConfirm={confirm} okText="Yes" cancelText="No" icon={icon}>
+      <Popconfirm cancelButtonProps={{type: "link"}} placement="right" title={text} onConfirm={confirm} okText="Yes" cancelText="No">
         <Button style={{ width: 100, marginBottom: 16 }}>Right</Button>
       </Popconfirm>
       <Popconfirm
+        cancelButtonProps={{type: "link"}}
         placement="rightBottom"
         title={text}
         onConfirm={confirm}
         okText="Yes"
         cancelText="No"
-        icon={icon}
       >
         <Button style={{ width: 100, marginBottom: 16 }}>RB</Button>
       </Popconfirm>
     </div>
     <div style={{ clear: 'both', whiteSpace: 'nowrap' }}>
       <Popconfirm
+        cancelButtonProps={{type: "link"}}
         placement="bottomLeft"
         title={text}
         onConfirm={confirm}
         okText="Yes"
         cancelText="No"
-        icon={icon}
       >
         <Button style={{ marginRight: 16, width: 100 }}>BL</Button>
       </Popconfirm>
-      <Popconfirm placement="bottom" title={text} onConfirm={confirm} okText="Yes" cancelText="No" icon={icon}>
+      <Popconfirm cancelButtonProps={{type: "link"}} placement="bottom" title={text} onConfirm={confirm} okText="Yes" cancelText="No">
         <Button style={{ marginRight: 16, width: 100 }}>Bottom</Button>
       </Popconfirm>
       <Popconfirm
+        cancelButtonProps={{type: "link"}}
         placement="bottomRight"
         title={text}
         onConfirm={confirm}
         okText="Yes"
         cancelText="No"
-        icon={icon}
       >
         <Button style={{ width: 100 }}>BR</Button>
       </Popconfirm>

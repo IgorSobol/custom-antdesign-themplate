@@ -3,40 +3,53 @@ Icon example:
 
 <br />
 <h3>Basic</h3>
-<p>Use tag <mark> `<Icon />` </mark> to create an icon and set its <mark> type </mark> in the type prop. Specify the <mark> spin </mark> property to show spinning animation and the <mark> theme </mark> property to switch between different themes.</p>
+<p>Import icons from <mark>@ant-design/icons</mark>, component name of icons with different theme is the icon name suffixed by the theme name. Specific the <mark>spin</mark> property to show spinning animation.</p>
 
 ```js padded
-  import { Icon } from 'antd';
-  <>
-    <Icon type="home" />
-    <Icon type="setting" theme="filled" />
-    <Icon type="smile" theme="outlined" />
-    <Icon type="sync" spin />
-    <Icon type="smile" rotate={180} />
-    <Icon type="loading" />
-  </>
+  import {
+    HomeOutlined,
+    SettingFilled,
+    SmileOutlined,
+    SyncOutlined,
+    LoadingOutlined,
+  } from '@ant-design/icons';
+
+  const iconsListStyles = {
+    display: 'flex',
+    width: '50%'
+  };
+
+  <div>
+    <HomeOutlined />
+    <SettingFilled />
+    <SmileOutlined />
+    <SyncOutlined spin />
+    <SmileOutlined rotate={180} />
+    <LoadingOutlined />
+  </div>
 ```
 
 <br />
 <h3>Two-tone icon and colorful icon</h3>
-<p>USpecify the property <mark> theme </mark> to <mark> twoTone </mark> to render two-tone icons. You can also set the primary color.</p>
+<p>You can set <mark>twoToneColor</mark> prop to specific primary color for two-tone icons.</p>
 
 ```js padded
-  import { Icon } from 'antd';
+  import { SmileTwoTone, HeartTwoTone, CheckCircleTwoTone } from '@ant-design/icons';
 
-  <>
-    <Icon type="smile" theme="twoTone" />
-    <Icon type="heart" theme="twoTone" twoToneColor="#eb2f96" />
-    <Icon type="check-circle" theme="twoTone" twoToneColor="#52c41a" />
-  </>
+  <div>
+    <SmileTwoTone />
+    <HeartTwoTone twoToneColor="#eb2f96" />
+    <CheckCircleTwoTone twoToneColor="#52c41a" />
+  </div>
 ```
 
 <br />
 <h3>Custom Icon</h3>
-<p>Create a reusable React component by using <mark> `<Icon component={...} />` </mark>. The property <mark> component </mark> takes a React component that renders to <mark> svg </mark> element.</p>
+<p>Create a reusable React component by using <mark>`<Icon component={...} />`</mark>. The property component takes a React <mark>component</mark> that renders to <mark>svg</mark> element.</p>
 
 ```js padded
-  import { Icon } from 'antd';
+  
+  import Icon from '@ant-design/icons';
 
   const HeartSvg = () => (
     <svg width="1em" height="1em" fill="currentColor" viewBox="0 0 1024 1024">
@@ -93,25 +106,25 @@ Icon example:
 
   const PandaIcon = props => <Icon component={PandaSvg} {...props} />;
 
-  <>
+  <div className="custom-icons-list">
     <HeartIcon style={{ color: 'hotpink' }} />
     <PandaIcon style={{ fontSize: '32px' }} />
-  </>
+  </div>
 ```
 <br />
 <h3>Use iconfont.cn</h3>
 <p>If you are using <a href="https://www.iconfont.cn/" title="iconfont.cn">iconfont.cn</a>, you can use the icons in your project gracefully.</p>
 
 ```js padded
-  import { Icon } from 'antd';
+  import { createFromIconfontCN } from '@ant-design/icons';
 
-  const IconFont = Icon.createFromIconfontCN({
+  const IconFont = createFromIconfontCN({
     scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
   });
 
-  <>
+  <div>
     <IconFont type="icon-tuichu" />
     <IconFont type="icon-facebook" />
     <IconFont type="icon-twitter" />
-  </>
+  </div>
 ```

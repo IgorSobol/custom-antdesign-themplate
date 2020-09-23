@@ -1,47 +1,61 @@
 <p>Avatars can be used to represent people or objects. It supports images, Icons, or letters.</p>
-<a href="https://ant.design/components/avatar/" title="More details about Ant avatar">More details here</a>
+<a href="https://ant.design/components/avatar/" target="_blank" title="More details about Ant avatar">More details here</a>
 <br />
-<br />
-<br />
-<h3>When To Use</h3>
-<p>To input a value in a range.</p>
 <br />
 <h3>Basic</h3>
 <p>Three sizes and two shapes are available.</p>
 
 ```js
   import { Avatar } from 'antd';
+  import { UserOutlined } from '@ant-design/icons';
+
+  const rowStyles = {
+    marginBottom: 16
+  };
+
+  const avatarStyles = {
+    marginRight: 16
+  };
 
   <div>
-    <div style={{ marginBottom: 16 }}>
-      <Avatar style={{ marginRight: 16 }} size={64} icon="user" />
-      <Avatar style={{ marginRight: 16 }} size="large" icon="user" />
-      <Avatar style={{ marginRight: 16 }} icon="user" />
-      <Avatar size="small" icon="user" />
+    <div style={rowStyles}>
+      <Avatar icon={<UserOutlined />} size={64} style={avatarStyles} />
+      <Avatar icon={<UserOutlined />} size="large" style={avatarStyles} />
+      <Avatar icon={<UserOutlined />} style={avatarStyles} />
+      <Avatar icon={<UserOutlined />} size="small" />
     </div>
     <div>
-      <Avatar style={{ marginRight: 16 }} shape="square" size={64} icon="user" />
-      <Avatar style={{ marginRight: 16 }} shape="square" size="large" icon="user" />
-      <Avatar style={{ marginRight: 16 }} shape="square" icon="user" />
-      <Avatar shape="square" size="small" icon="user" />
+      <Avatar shape="square" icon={<UserOutlined />} size={64} style={avatarStyles} />
+      <Avatar shape="square" icon={<UserOutlined />} size="large" style={avatarStyles} />
+      <Avatar shape="square" icon={<UserOutlined />} style={avatarStyles} />
+      <Avatar shape="square" icon={<UserOutlined />} size="small" />
     </div>
   </div>
 ```
 
 <br />
-<h3>Basic</h3>
-<p>Three sizes and two shapes are available.</p>
+<h3>Type</h3>
+<p>Image, Icon and letter are supported, and the latter two kinds of avatar can have custom colors and background colors.</p>
 
 ```js
-  import { Avatar, Icon } from 'antd';
+  import { Avatar } from 'antd';
+  import { UserOutlined } from '@ant-design/icons';
+
+  const avatarIndents = {
+    marginRight: 16
+  };
+  const avatarStyles = {
+    marginRight: 16,
+    color: '#f56a00',
+    backgroundColor: '#fde3cf'
+  };
 
   <div>
-    <Avatar style={{ marginRight: 16 }} icon="user" />
-    <Avatar style={{ marginRight: 16 }} icon={<Icon type="user" />} />
-    <Avatar style={{ marginRight: 16 }}>U</Avatar>
-    <Avatar style={{ marginRight: 16 }}>USER</Avatar>
-    <Avatar style={{ marginRight: 16 }} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-    <Avatar style={{ color: '#f56a00', backgroundColor: '#fde3cf', marginRight: 16 }}>U</Avatar>
-    <Avatar style={{ backgroundColor: '#87d068' }} icon="user" />
+    <Avatar style={avatarIndents} icon={<UserOutlined />} />
+    <Avatar style={avatarIndents}>U</Avatar>
+    <Avatar style={avatarIndents}>USER</Avatar>
+    <Avatar style={avatarIndents} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+    <Avatar style={avatarStyles}>U</Avatar>
+    <Avatar style={{ backgroundColor: '#87d068' }} icon={<UserOutlined />} />
   </div>
 ```

@@ -6,7 +6,8 @@
 
  ```js
   import React, { useState } from 'react';
-  import { Modal, Button, Upload, Input, Icon, Row, Col, Form } from 'antd';
+  import { Modal, Button, Upload, Input, Row, Col, Form } from 'antd';
+  import { PlusOutlined } from '@ant-design/icons';
 
   const App = () => {
     const [visible, setVisible] = useState(false);
@@ -44,7 +45,7 @@
                   showUploadList={false}
                   action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
                 >
-                  <Icon type={'plus'} />
+                  <PlusOutlined />
                 </Upload>
               </Col>
               <Col

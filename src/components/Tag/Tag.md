@@ -11,7 +11,7 @@
 <p>Usage of basic Tag, and it could be closable by set <mark>closable</mark> property. Closable Tag supports <mark>onClose</mark> events..</p>
 
 ```js
-  import { Tag, Icon } from 'antd';
+  import { Tag } from 'antd';
 
   <div>
     <Tag color="#396aff">
@@ -30,7 +30,8 @@
 <h3>Has icon</h3>
 
 ```js
-  import { Tag, Icon } from 'antd';
+  import { Tag } from 'antd';
+  import { PlusOutlined } from '@ant-design/icons';
 
   <div>
     <Tag color="#108ee9">
@@ -38,13 +39,13 @@
     </Tag>
     <Tag color="#108ee9">
       <a href="#" title="Tag text">
-        <Icon style={{ marginRight: 4 }} type="plus" />
+        <PlusOutlined style={{ marginRight: 4 }} />
         Left icon
       </a>
     </Tag>
     <Tag color="#108ee9">
       Right icon
-      <Icon style={{ marginLeft: 4 }} type="plus" />
+      <PlusOutlined style={{ marginLeft: 4 }} />
     </Tag>
   </div>
 ```
@@ -54,6 +55,7 @@
 ```js
   import React, {useState} from 'react';
   import { Tag, Input, Tooltip, Icon } from 'antd';
+  import { PlusOutlined } from '@ant-design/icons';
 
   function EditableTagGroup() {
     const [ tags, setTegs ] = useState([
@@ -103,7 +105,7 @@
         )}
         {!inputVisible && (
           <Tag onClick={() => showInput()} style={{ borderStyle: 'dashed' }}>
-            <Icon type="plus" />
+            <PlusOutlined />
             New Tag
           </Tag>
         )}

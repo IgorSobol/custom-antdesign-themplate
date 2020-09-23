@@ -17,11 +17,11 @@
   import { Progress } from 'antd';
 
   <div>
-    <Progress percent={30} />
-    <Progress percent={50} status="active" />
-    <Progress percent={70} status="exception" />
-    <Progress percent={100} />
-    <Progress percent={50} showInfo={false} />
+    <Progress percent={30} size="small" />
+    <Progress percent={50} size="small" status="active" />
+    <Progress percent={70} size="small" status="exception" />
+    <Progress percent={100} size="small" />
+    <Progress percent={50} size="small" showInfo={false} />
   </div>
 ```
 
@@ -33,50 +33,8 @@
   import { Progress } from 'antd';
   
   <div>
-    <Progress type="circle" percent={75} />
-    <Progress type="circle" percent={70} status="exception" />
+    <Progress type="circle" percent={75} style={{ marginRight: 16 }} />
+    <Progress type="circle" percent={70} status="exception" style={{ marginRight: 16 }} />
     <Progress type="circle" percent={100} />
   </div>
-```
-
-```js
-  import React, { useState } from 'react';
-  import { Progress, Button } from 'antd';
-  
-  function App() {
-    const [percent, setPersent] = useState(0);
-    const ButtonGroup = Button.Group;
-
-    increase = () => {
-      console.log(percent);
-      let i = percent + 10;
-      if (i < 100) {
-        setPersent(i);
-      } else {
-        setPersent(100);
-      }
-    };
-
-    decline = () => {
-      console.log(percent);
-      let i = percent - 10;
-      if (i > 0) {
-        setPersent(i);
-      } else {
-        setPersent(0);
-      }
-    };
-    
-    return (
-      <div>
-        <Progress percent={percent} />
-        <ButtonGroup>
-          <Button onClick={() => decline()} icon="minus" />
-          <Button onClick={() => increase()} icon="plus" />
-        </ButtonGroup>
-      </div>
-    )
-  }
-
-  <App />
 ```

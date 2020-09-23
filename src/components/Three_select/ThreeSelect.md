@@ -84,6 +84,9 @@
   <App />
 ```
 
+<br />
+<h3>Checkable</h3>
+<p>Multiple and checkable.</p>
 
 ```js
   import React, { useState } from 'react';

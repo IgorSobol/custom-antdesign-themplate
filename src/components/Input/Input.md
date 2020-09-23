@@ -49,25 +49,26 @@
 <p>Add prefix or suffix icons inside input.</p>
 
 ```js
-  import { Input, Icon } from 'antd';
+  import { Input } from 'antd';
+  import { ArrowDownOutlined, UserOutlined } from '@ant-design/icons';
   
   <div style={{ width: '30%' }}>
     <Input
       style={{ marginBottom: 20 }}
       size="large"
-      prefix={<Icon type="down" style={{ color: '#96A9C8' }} />}
+      prefix={<ArrowDownOutlined style={{ color: '#96A9C8' }} />}
       placeholder="Left icon"
     />
     <Input
       style={{ marginBottom: 20 }}
       size="large"
-      suffix={<Icon type="down" style={{ color: '#96A9C8' }} />}
+      suffix={<ArrowDownOutlined style={{ color: '#96A9C8' }} />}
       placeholder="Right icon"
     />
     <Input
       size="large"
-      suffix={<Icon type="user" style={{ color: '#96A9C8' }}   />}
-      prefix={<Icon type="user" style={{ color: '#96A9C8' }}   />}
+      suffix={<UserOutlined style={{ color: '#96A9C8' }}   />}
+      prefix={<UserOutlined style={{ color: '#96A9C8' }}   />}
       placeholder="Double icons"
     />
   </div>
@@ -121,7 +122,8 @@
 <p>Using pre & post tabs example.</p>
 
 ```js
-  import { Input, Select, Icon } from 'antd';
+  import { Input, Select } from 'antd';
+  import { SettingOutlined } from '@ant-design/icons'
 
   const { Option } = Select;
 
@@ -167,7 +169,7 @@
     <div style={{ marginBottom: 16 }}>
       <Input
         size="large"
-        addonAfter={<Icon type="setting" />}
+        addonAfter={<SettingOutlined />}
         placeholder="mysite"
       />
     </div>

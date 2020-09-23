@@ -44,7 +44,9 @@
   function onChange(checkedValues) {
     console.log('checked = ', checkedValues);
   }
-
+  const rowStyle = {
+    marginBottom: 16
+  };
   const plainOptions = ['Apple', 'Pear', 'Orange'];
   const options = [
     { label: 'Apple', value: 'Apple' },
@@ -58,17 +60,27 @@
   ];
 
   <div>
-    <Checkbox.Group options={plainOptions} defaultValue={['Apple']} onChange={onChange} />
-    <br />
-    <br />
-    <Checkbox.Group options={options} defaultValue={['Pear']} onChange={onChange} />
-    <br />
-    <br />
-    <Checkbox.Group
-      options={optionsWithDisabled}
-      disabled
-      defaultValue={['Apple']}
-      onChange={onChange}
-    />
+    <div style={rowStyle}>
+      <Checkbox.Group
+        options={plainOptions}
+        defaultValue={['Apple']}
+        onChange={onChange}
+      />
+    </div>
+    <div style={rowStyle}>
+      <Checkbox.Group
+        options={options}
+        defaultValue={['Pear']}
+        onChange={onChange}
+      />
+    </div>
+    <div style={rowStyle}>
+      <Checkbox.Group
+        options={optionsWithDisabled}
+        defaultValue={['Apple']}
+        onChange={onChange}
+        disabled
+      />
+    </div>
   </div>
 ```

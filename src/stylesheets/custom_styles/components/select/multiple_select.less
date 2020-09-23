@@ -1,55 +1,49 @@
-
-.ant-select-selection--multiple {
-  padding-bottom: 7px;
-  .ant-select-selection__placeholder {
-    margin-top: 5px;
+.ant-select-multiple {
+  .ant-select-selector {
+    padding: 7px 12px;
   }
-}
-.ant-select-selection--multiple .ant-select-selection__rendered {
-  margin-right: 3px;
-  margin-left: 12px;
-  padding-top: 8px;
-  line-height: 12px;
-  li {
-    height: auto !important;
-  }
-}
-.ant-select-selection--multiple .ant-select-selection__rendered li {
-  margin-top: 4px;
-  margin-right: 8px;
-  margin-bottom: 4px;
-  padding: 4px 28px 4px 8px;
-  font-size: 12px;
-  line-height: 12px !important;
-  border-radius: @border-radius-base;
-  &:last-child {
-    max-height: 24px;
-    line-height: 12px;
-  }
-  &:not(:last-child) {
-    border-color: @grey-100;
+  .ant-select-selection-item {
+    height: 24px !important;
+    padding-right: 8px;
+    padding-left: 8px;
+    margin-top: 4px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 22px !important;
     background-color: @grey-100;
+    border-color: @grey-100;
+  }
+  .ant-select-selection-item-content {
+    margin-right: 4px;
+  }
+  .ant-select-item-option-selected {
+    svg {
+      fill: @primary-color;
+    }
   }
 }
-.ant-select-selection__placeholder {
-  font-size: 14px;
-}
-.ant-select-selection__clear {
-  display: none;
-}
-.ant-select-dropdown-menu-item {
-  padding: 10px 16px;
-  &:last-child {
-    border-radius: none;
+.ant-select-multiple-menu { // Custom class
+  padding-top: 8px;
+  padding-bottom: 8px;
+  .ant-select-item {
+    padding: 10px 16px;
+    font-size: 14px;
+    line-height: 20px;
   }
-}
-
-// Custom class
-.ant-custom-dropdown__add-button {
-  padding: 8px 16px !important;
-  color: @black-secondary-text;
-  font-weight: bold;
-}
-.ant-custom-dropdown__add-button-icon {
-  font-size: 14px;
+  .ant-select-item:not(.ant-select-item-option-disabled) {
+    color: @black-primary-text;
+    &.ant-select-item-option-selected {
+      background-color: @grey-50;
+      font-weight: 400;
+    }
+    &:hover,
+    &:focus {
+      background-color: @blue-100;
+    }
+  }
+  .ant-custom-dropdown__add-button {
+    padding: 10px 8px 0;
+    color: @black-secondary-text;
+  }
 }

@@ -37,6 +37,7 @@
     background-color: @primary-pressed;
   }
 }
+// Danger button
 .ant-btn-danger {
   &:hover,
   &:focus {
@@ -45,6 +46,28 @@
   }
   &:active {
     background-color: @accent-pressed;
+  }
+  &.ant-btn-loading {
+    color: @pink-1000;
+    .anticon-loading {
+      color: @pink-1000;
+    }
+  }
+}
+// Delete button
+.ant-btn-dangerous {
+  border-color: @black-secondary-text;
+  color: @black-secondary-text;
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    color: @pink-1000;
+    background-color: @pink-100;
+    border-color: @pink-100;
+  }
+  &:active {
+    background-color: @pink-200;
+    border-color: @pink-200;
   }
   &.ant-btn-loading {
     color: @pink-1000;

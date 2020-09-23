@@ -14,7 +14,8 @@
 <p>Classic mode. File selection dialog pops up when upload button is clicked.</p>
 
 ```js
-  import { Upload, message, Button, Icon } from 'antd';
+  import { Upload, message, Button } from 'antd';
+  import { UploadOutlined } from '@ant-design/icons';
 
   const props = {
     name: 'file',
@@ -36,7 +37,7 @@
   
   <Upload {...props}>
     <Button>
-      <Icon type="upload" /> Click to Upload
+      <UploadOutlined /> Click to Upload
     </Button>
   </Upload>
 ```
@@ -45,7 +46,8 @@
 <p>Click to upload user's avatar, and validate size and format of picture with <mark>beforeUpload.</mark></p>
 
 ```js
-  import { Upload, Icon } from 'antd';
+  import { Upload } from 'antd';
+  import { PlusOutlined } from '@ant-design/icons';
 
   <Upload
     name="avatar"
@@ -54,6 +56,6 @@
     showUploadList={false}
     action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
   >
-    <Icon type={'plus'} />
+    <PlusOutlined />
   </Upload>
 ```

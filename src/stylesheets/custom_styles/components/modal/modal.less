@@ -1,7 +1,24 @@
+.ant-modal button:last-child {
+  min-width: 96px;
+}
+.ant-modal-title {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+}
 .ant-modal-confirm .ant-modal-body {
   padding: 24px;
 }
-.ant-modal-confirm-body > .anticon + .ant-modal-confirm-title + .ant-modal-confirm-content {
-  margin-top: 24px;
-  margin-left: 0;
+.ant-modal-confirm-body {
+  & .ant-modal-confirm-title {
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    color: @black-primary-text;
+  }
+  & > .anticon + .ant-modal-confirm-title + .ant-modal-confirm-content {
+    margin-top: 24px;
+    margin-left: 0;
+  }  
 }

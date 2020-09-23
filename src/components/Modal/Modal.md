@@ -28,14 +28,13 @@
             Open Modal
           </Button>
           <Modal
-            title="Basic Modal"
+            cancelButtonProps={{type: "link"}}
+            title="Content confirmation"
             visible={this.state.visible}
             onOk={() => this.setState({ visible: !this.state.visible })}
             onCancel={() => this.setState({ visible: !this.state.visible })}
           >
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
+            <p>A more complex example which define a customized footer button bar. The dialog will change to loading state after clicking the submit button, and when the loading is done, the modal dialog will be closed.</p>
           </Modal>
         </div>
       );
@@ -44,6 +43,7 @@
 
   <App />
 ```
+
 <br />
 <h3>Confirmation modal dialog</h3>
 <p>Use <mark>confirm()</mark> to show a confirmation modal dialog.</p>
@@ -55,8 +55,9 @@
 
   function showConfirm() {
     confirm({
+      cancelButtonProps: { type: "link" },
       title: 'Do you Want to delete these items?',
-      content: 'Some descriptions',
+      content: 'Some description of the problem or impotant infomation.',
       onOk() {
         console.log('OK');
       },
@@ -65,8 +66,9 @@
 
   function showDeleteConfirm() {
     confirm({
+      cancelButtonProps: { type: "link" },
       title: 'Are you sure delete this task?',
-      content: 'Some descriptions',
+      content: 'Some description of the problem or impotant infomation.',
       okText: 'Yes',
       okType: 'danger',
       cancelText: 'No',
@@ -78,8 +80,9 @@
 
   function showPropsConfirm() {
     confirm({
+      cancelButtonProps: { type: "link" },
       title: 'Are you sure delete this task?',
-      content: 'Some descriptions',
+      content: 'Some description of the problem or impotant infomation.',
       okText: 'Yes',
       okType: 'danger',
       okButtonProps: {
@@ -120,11 +123,10 @@
 
   function info() {
     Modal.info({
-      title: 'This is a notification message',
+      title: 'This is info message',
       content: (
         <div>
-          <p>some messages...some messages...</p>
-          <p>some messages...some messages...</p>
+          <p>Some description of the problem or impotant infomation.</p>
         </div>
       ),
       onOk() {},
@@ -133,22 +135,22 @@
 
   function success() {
     Modal.success({
-      title: 'This is an success message',
-      content: 'some messages...some messages...',
+      title: 'This is success message',
+      content: 'Some description of the problem or impotant infomation.',
     });
   }
 
   function error() {
     Modal.error({
-      title: 'This is an error message',
-      content: 'some messages...some messages...',
+      title: 'This is error message',
+      content: 'Some description of the problem or impotant infomation.',
     });
   }
 
   function warning() {
     Modal.warning({
-      title: 'This is a warning message',
-      content: 'some messages...some messages...',
+      title: 'This is warning message',
+      content: 'Some description of the problem or impotant infomation.',
     });
   }
   
@@ -167,11 +169,11 @@
     </Button>
     <Button
       style={{ marginRight: 16 }}
-      onClick={error}
+      onClick={warning}
     >
-      Error
+      Warning
     </Button>
-    <Button onClick={warning}>Warning</Button>
+    <Button onClick={error}>Error</Button>
   </div>
 ```
 <br />

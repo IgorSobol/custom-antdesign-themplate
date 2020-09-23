@@ -1,0 +1,182 @@
+@ant-picker-cell-width: 36px;
+@ant-picker-cell-height: 36px;
+
+.ant-picker {
+  &.ant-picker-large {
+    height: 48px;
+    padding: 14px 12px;
+    color: @black-secondary-text;
+    .ant-picker-input {
+      color: @black-secondary-text;
+    }
+    .anticon-calendar {
+      &,
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .anticon-calendar svg {
+      width: 20px;
+      height: 20px;
+      fill: @black-secondary-text;
+    }
+    .ant-picker-clear,
+    .anticon-close-circle svg {
+      width: 22px;
+      height: 22px;
+      background-color: white;
+    }
+  }
+}
+.ant-picker-header {
+  height: 52px;
+  &,
+  .ant-picker-header-view {
+    line-height: 52px !important;
+  }
+  .ant-picker-header-view {
+    .ant-picker-month-btn,
+    .ant-picker-year-btn {
+      color: @black-primary-text;
+    }
+  }
+  .ant-picker-header-prev-btn,
+  .ant-picker-header-super-prev-btn,
+  .ant-picker-header-next-btn,
+  .ant-picker-header-super-next-btn {
+    span {
+      &:before,
+      &:after {
+        border-color: @black-secondary-text;
+      }
+    }
+  }
+  .ant-picker-month-panel & {
+    button {
+      line-height: 52px;
+    }
+    .ant-picker-header-super-prev-btn,
+    .ant-picker-header-super-next-btn {
+      font-size: 25px;
+      color: @black-secondary-text;
+    }
+  }
+}
+.ant-picker-body {
+  padding: 16px 12px !important;
+  .ant-picker-content th {
+    color: @grey-800;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .ant-picker-cell {
+    font-size: 14px;
+    height: @ant-picker-cell-height;
+    padding-top: 0;
+    padding-bottom: 0;
+    .ant-picker-cell-inner {
+      min-width: @ant-picker-cell-width;
+      height: @ant-picker-cell-height;
+      line-height: @ant-picker-cell-height;
+    }
+    &:not(.ant-picker-cell-in-view) {
+      color: @black-disabled-text;
+    }
+  }
+  .ant-picker-cell-today:not(.ant-picker-cell-selected) {
+    .ant-picker-cell-inner {
+      background-color: transparent;
+      color: @black-primary-text;
+      border: 1px solid @grey-300 !important;
+      &:before {
+        border: none;
+      }
+      &:hover,
+      &:focus {
+        border-color: @grey-100 !important;
+      }
+    }
+  }
+  .ant-picker-cell-in-range {
+    &.ant-picker-cell-in-view:before {
+      width: @ant-picker-cell-width;
+      height: @ant-picker-cell-height;
+      background-color: @grey-200 !important;
+      border: 1px solid transparent;
+    }
+    &.ant-picker-cell-range-hover-start,
+    &.ant-picker-cell-range-hover-end {
+      width: @ant-picker-cell-width;
+      height: @ant-picker-cell-height;
+      overflow: hidden;
+      &:before {
+        background-color: transparent;
+      }
+    }
+  }
+  .ant-picker-cell-range-hover.ant-picker-cell-in-view {
+    &:not(.ant-picker-cell-in-range):before {
+      width: @ant-picker-cell-width;
+      height: @ant-picker-cell-height;
+      background-color: @grey-200 !important;
+      border: 1px solid transparent;
+    }
+  }
+  .ant-picker-cell-range-hover-start.ant-picker-cell-in-view,
+  .ant-picker-cell-range-hover-end.ant-picker-cell-in-view {
+    &:not(.ant-picker-cell-in-range):not(.ant-picker-cell-selected) {
+      color: @primary-color;
+      background-color: transparent;
+      &:before {
+        width: @ant-picker-cell-width;
+        height: @ant-picker-cell-height;
+        border: 1px solid @blue-1000;
+        border-radius: 6px !important;
+      }
+      &:after {
+        display: none !important;
+      }
+    } 
+  }
+}
+.ant-picker-footer {
+  line-height: 43px;
+}
+.ant-picker-month-panel {
+  .ant-picker-cell {
+    width: auto;
+    &:nth-child(2) {
+      margin-right: 26px;
+      margin-left: 26px;
+    }
+  }
+  .ant-picker-cell-inner {
+    min-width: 68px !important;
+  }
+}
+.ant-picker-week-panel {
+  width: 317px;
+  .ant-picker-week-panel-row {
+    &:hover,
+    &:focus {
+      color: @black-primary-text !important;
+      background-color: @grey-100;
+    }
+  }
+  .ant-picker-week-panel-row-selected .ant-picker-cell {
+    background-color: @grey-100;
+    .ant-picker-cell-inner {
+      color: @black-primary-text;
+    }
+  }
+  .ant-picker-cell {
+    width: @ant-picker-cell-width !important;
+  }
+  .ant-picker-cell-week {
+    color: @black-secondary-text !important;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+}

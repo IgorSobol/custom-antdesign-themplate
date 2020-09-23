@@ -18,7 +18,7 @@
   <Form className="ant-advanced-search-form" onSubmit={this.handleSearch}>
     <Row gutter={16}>
       <Col span={12}>
-        <Form.Item label={`Field Title`}>
+        <Form.Item>
           <Input
             size="large"
             placeholder="Placeholder"
@@ -26,7 +26,7 @@
         </Form.Item>
       </Col>
       <Col span={12}>
-        <Form.Item label={`Field Title`}>
+        <Form.Item>
           <Input
             size="large"
             placeholder="Placeholder"
@@ -34,7 +34,7 @@
         </Form.Item>
       </Col>
     </Row>
-    <Form.Item label={`Field Title`}>
+    <Form.Item>
       <Input
         size="large"
         placeholder="Placeholder"
@@ -42,7 +42,7 @@
     </Form.Item>
     <Row gutter={16}>
       <Col span={18}>
-        <Form.Item label={`Field Title`}>
+        <Form.Item>
           <Input
             size="large"
             placeholder="Placeholder"
@@ -50,7 +50,7 @@
         </Form.Item>
       </Col>
       <Col span={6}>
-        <Form.Item label={`Field Title`}>
+        <Form.Item>
           <Input
             size="large"
             placeholder="Placeholder"
@@ -74,6 +74,7 @@
   const { Option } = Select;
 
   class App extends React.Component {
+
     render() {
 
       handleSubmitOne = e => {
@@ -92,29 +93,19 @@
         });
       };        
 
-      const { getFieldDecorator } = this.props.form;
       return (
         <Form labelCol={{ span: 5 }} wrapperCol={{ span: 12 }} onSubmit={(e) => handleSubmitOne(e)}>
-          <Form.Item label="Note">
-            {getFieldDecorator('note', {
-              rules: [{ 
-                required: true,
-                message: 'Please input your note!'
-              }],
-            })(<Input />)}
+          <Form.Item label="Note" name="note" rules={[{ required: true, message: 'Please input your note!'}]}>
+            <Input />
           </Form.Item>
-          <Form.Item label="Gender">
-            {getFieldDecorator('gender', {
-              rules: [{ required: true, message: 'Please select your gender!' }],
-            })(
-              <Select
-                placeholder="Select a option and change input text above"
-                onChange={(e) => handleSelectChange(e)}
-              >
-                <Option value="male">male</Option>
-                <Option value="female">female</Option>
-              </Select>,
-            )}
+          <Form.Item label="Gender" name="gender" rules={[{ required: true, message: 'Please select your gender!' }]}>
+            <Select
+              placeholder="Select a option and change input text above"
+              onChange={(e) => handleSelectChange(e)}
+            >
+              <Option value="male">male</Option>
+              <Option value="female">female</Option>
+            </Select>
           </Form.Item>
           <Form.Item wrapperCol={{ span: 12, offset: 5 }}>
             <Button type="primary" htmlType="submit">
@@ -126,15 +117,13 @@
     }
   }
 
-  const WrappedApp = Form.create({ name: 'coordinated' })(App);
-
-  <WrappedApp />
+  <App />
 ```
 <br />
 <h3>Extended example</h3>
 
 ```js
-  import { Form, Input, DatePicker, TimePicker, Select, Cascader, InputNumber } from 'antd';
+  import { Form, Input, DatePicker, TimePicker, Select, Cascader } from 'antd';
 
   const { Option } = Select;
 
@@ -225,10 +214,6 @@
       <Form.Item style={{ display: 'inline-block', width: 'calc(50% - 12px)' }}>
         <DatePicker />
       </Form.Item>
-    </Form.Item>
-
-    <Form.Item label="Success" hasFeedback validateStatus="success">
-      <InputNumber style={{ width: '100%' }} />
     </Form.Item>
 
     <Form.Item label="Success" hasFeedback validateStatus="success">

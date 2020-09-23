@@ -15,12 +15,26 @@
 ```js
   import { Select } from 'antd';
   import '../../stylesheets/applications.less'
+
   const { Option } = Select;
+  const selectStyles = {
+    width: 160,
+    marginRight: 20
+  }
+
   function handleChange(value) {
     console.log(`selected ${value}`);
   }
-  <>
-    <Select defaultValue="lucy" style={{ width: 120, marginRight: 20 }} onChange={handleChange} size="large">
+
+  <div>
+    <Select
+      defaultValue="lucy"
+      onChange={handleChange}
+      size="large"
+      style={selectStyles}
+      dropdownClassName="ant-select-multiple-menu"
+      listHeight={238}
+    >
       <Option value="jack">Jack</Option>
       <Option value="lucy">Lucy</Option>
       <Option value="disabled" disabled>
@@ -28,13 +42,25 @@
       </Option>
       <Option value="Yiminghe">yiminghe</Option>
     </Select>
-    <Select defaultValue="lucy" style={{ width: 120, marginRight: 20 }} disabled size="large">
+    <Select
+      defaultValue="lucy"
+      disabled
+      size="large"
+      style={selectStyles}
+    >
       <Option value="lucy">Lucy</Option>
     </Select>
-    <Select defaultValue="lucy" style={{ width: 120 }} loading size="large">
+    <Select
+      defaultValue="lucy"
+      loading
+      size="large"
+      style={selectStyles}
+      dropdownClassName="ant-select-multiple-menu"
+      listHeight={238}
+    >
       <Option value="lucy">Lucy</Option>
     </Select>
-  </>
+  </div>
 ```
 
 <br />
@@ -69,6 +95,8 @@
     filterOption={(input, option) =>
       option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
     }
+    dropdownClassName="ant-select-multiple-menu"
+    listHeight={238}
   >
     <Option value="jack">Jack</Option>
     <Option value="lucy">Lucy</Option>
@@ -85,45 +113,25 @@
   
   const { Option } = Select;
   const children = [];
+
   for (let i = 10; i < 36; i++) {
     children.push(<Option key={i.toString(36) + i}>{'Option ' + i}</Option>);
   }
+
   function handleChange(value) {
     console.log(`selected ${value}`);
   }
+
   <Select
-    size="large"
     mode="multiple"
     style={{ width: '50%' }}
     placeholder="Please select"
     defaultValue={['Option 1', 'Option 2']}
     onChange={handleChange}
+    dropdownClassName="ant-select-multiple-menu"
+    listHeight={238}
   >
     {children}
-  </Select>
-```
-
-<br />
-<h3>Option Group</h3>
-<p>Using OptGroup to group the options.</p>
-
-```js
-  import { Select } from 'antd';
-
-  const { Option, OptGroup } = Select;
-
-  function handleChange(value) {
-    console.log(`selected ${value}`);
-  }
-
-  <Select defaultValue="lucy" style={{ width: 200 }} onChange={handleChange} size="large">
-    <OptGroup label="Manager">
-      <Option value="jack">Jack</Option>
-      <Option value="lucy">Lucy</Option>
-    </OptGroup>
-    <OptGroup label="Engineer">
-      <Option value="Yiminghe">yiminghe</Option>
-    </OptGroup>
   </Select>
 ```
 
@@ -147,11 +155,12 @@
   }
 
   <Select
-    size="large"
     mode="tags"
-    style={{ width: '100%' }}
+    style={{ width: '50%' }}
     placeholder="Tags Mode"
     onChange={handleChange}
+    dropdownClassName="ant-select-multiple-menu"
+    listHeight={238}
   >
     {children}
   </Select>
@@ -163,7 +172,8 @@
 
 ```js
   import React, { useState } from 'react';
-  import { Select, Icon, Divider } from 'antd';
+  import { Select, Divider } from 'antd';
+  import { PlusOutlined } from '@ant-design/icons';
 
   const { Option } = Select;
   let index = 0;
@@ -173,7 +183,7 @@
     constructor(props) {
       super(props);
       this.state = {
-        items: ['jack', 'lucy']
+        items: ['Option 1', 'Option 2', 'Option 3']
       };
     }
     
@@ -182,8 +192,10 @@
       return (
         <Select
           size="large"
-          style={{ width: 240 }}
-          placeholder="custom dropdown render"
+          style={{ width: 160 }}
+          placeholder="Custom option"
+          dropdownClassName="ant-select-multiple-menu"
+          listHeight={238}
           dropdownRender={menu => (
             <div>
               {menu}
@@ -195,7 +207,7 @@
                 
                 onClick={() => this.setState({ count: this.state.items.push(`New item ${index++}`) })}
               >
-                <Icon type="plus" className="ant-custom-dropdown__add-button-icon" /> Add item
+                <PlusOutlined /> Add item
               </div>
             </div>
           )}
