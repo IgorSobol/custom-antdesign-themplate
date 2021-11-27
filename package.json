@@ -28,22 +28,22 @@
   },
   "homepage": "https://github.com/IgorSobol/custom-antdesign-themplate#readme",
   "dependencies": {
+  },
+  "devDependencies": {
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-less": "^1.0.1",
     "antd": "^4.1.5",
     "babel-plugin-import": "^1.12.2",
     "cryptiles": "^4.1.2",
-    "hoek": "^9.2.1",
-    "less": "^4.1.2",
     "next": "12",
     "npm": "^8.1.4",
     "null-loader": "^3.0.0",
-    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-styleguidist": "^11.1.7"
-  },
-  "devDependencies": {
+    "react-styleguidist": "^11.1.7",
+    "hoek": "^9.2.1",
+    "less": "^4.1.2",
+    "prop-types": "^15.7.2",
     "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^8.3.0",
     "eslint-config-airbnb": "^19.0.1",
