@@ -1,4 +1,4 @@
-<a href="https://ant.design/components/table/" title="More details about Ant table">More details here</a>
+<!-- <a href="https://ant.design/components/table/" title="More details about Ant table">More details here</a>
 <br />
 <br />
 <br />
@@ -582,4 +582,4 @@
     size="middle"
     scroll={{ x: 'calc(700px + 50%)', y: 240 }}
   />
-```
+``` -->
